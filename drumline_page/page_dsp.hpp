@@ -12,10 +12,10 @@ const u32 kFilterOpen = 16;  // FILTER's default: choices 0..15 low-pass, 17..31
 
 // SRR: each held sample stands for this many, as a lower sample rate would; the
 // captions are 44.1 kHz over the hold.
-inline u32 srr_hold(u32 srr) {
-    static const u8 holds[16] = {1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64};
-    return holds[srr & 15u];
-}
+// The table sits at file scope: a function-local static in an inline function is
+// a Blackfin link hazard.
+const u8 kSrrHolds[16] = {1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64};
+inline u32 srr_hold(u32 srr) { return kSrrHolds[srr & 15u]; }
 // One block held: every hold-th sample stands until the next, `left` frames of
 // the current hold carried between blocks.
 inline void hold_block(i32* out, u32 frames, u32 hold, i32& held, i32& left) {
