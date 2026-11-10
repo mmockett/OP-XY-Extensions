@@ -1,0 +1,79 @@
+{
+  "id": "drumline_page",
+  "name": "Drumline page 2",
+  "description": "Press an encoder on stock Drumline for a second page: each key's filter, sample rate and FX sends, with step locks.",
+  "note": "Changes every Drumline track. Stock Drumline presets don't keep page 2.",
+  "claims": [],
+  "actions": [],
+  "drumline_page": {
+    "parameters": [
+      {
+        "label": "filter",
+        "choices": [
+          "L150",
+          "L196",
+          "L255",
+          "L332",
+          "L433",
+          "L565",
+          "L736",
+          "L959",
+          "L1.3k",
+          "L1.6k",
+          "L2.1k",
+          "L2.8k",
+          "L3.6k",
+          "L4.7k",
+          "L6.1k",
+          "L8.0k",
+          "OPEN",
+          "H50",
+          "H68",
+          "H94",
+          "H128",
+          "H175",
+          "H239",
+          "H327",
+          "H447",
+          "H612",
+          "H836",
+          "H1.1k",
+          "H1.6k",
+          "H2.1k",
+          "H2.9k",
+          "H4.0k"
+        ],
+        "default": 16
+      },
+      {
+        "label": "srr",
+        "choices": [
+          "OFF",
+          "22k",
+          "15k",
+          "11k",
+          "8.8k",
+          "7.3k",
+          "5.5k",
+          "4.4k",
+          "3.7k",
+          "2.8k",
+          "2.2k",
+          "1.8k",
+          "1.4k",
+          "1.1k",
+          "919",
+          "689"
+        ]
+      },
+      {
+        "label": "fx i",
+        "role": "send1"
+      },
+      {
+        "label": "fx ii",
+        "role": "send2"
+      }
+    ]
+  }
+}
