@@ -11,10 +11,9 @@ on:
 permissions:
   contents: read
 env:
-  # The SDK with the drumline_page capability: etcetc000/open-xy#411's branch until
-  # it merges, then staging.
-  OPEN_XY_REPOSITORY: mmockett/open-xy
-  OPEN_XY_REF: drum/drumline-page2
+  # The SDK with the drumline_page capability (etcetc000/open-xy#411).
+  OPEN_XY_REPOSITORY: etcetc000/open-xy
+  OPEN_XY_REF: staging
 jobs:
   extensions:
     runs-on: ubuntu-latest
